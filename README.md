@@ -19,6 +19,15 @@ npm shadcn@latest add <components_name>
 
 ```
 
+## Build
+
+Scaffold a starter template and customize the application with dependencies, styling libraries, and necessary imports.
+
+Design the personal-information user schema for the multi-step form (page-1)
+
+
+## Additional Info
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

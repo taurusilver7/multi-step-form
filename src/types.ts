@@ -23,3 +23,7 @@ export const billingInfoSchema = z.object({
 	expiryDate: z.string().min(4, "Invalid expiry date"),
 	cvv: z.string().min(3, "Invalid CVV").max(4),
 });
+
+export type PersonalInfo = z.infer<typeof personalInfoSchema>;
+export type ProfessionalInfo = z.infer<typeof professionalInfoSchema>;
+export type BillingInfo = z.infer<typeof billingInfoSchema>;

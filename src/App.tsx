@@ -1,12 +1,13 @@
+import MultistepForm from "./components/multi-step-form"
 
-import './App.css'
+
 
 function App() {
   
 
   return (
     <>
-      
+      <MultistepForm />
     </>
   )
 }

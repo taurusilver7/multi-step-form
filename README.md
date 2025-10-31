@@ -23,8 +23,9 @@ npm shadcn@latest add <components_name>
 
 Scaffold a starter template and customize the application with dependencies, styling libraries, and necessary imports.
 
-Design the personal-information user schema for the multi-step form (page-1)
+Design the multi-step schemas for the multi-step form (personal, professional & billing), and their corresponding schema types.
 
+Create a multi-step form component that handles the form steps for the multi-processing. Create a custom-hook
 
 ## Additional Info
 

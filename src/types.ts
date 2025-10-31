@@ -27,3 +27,5 @@ export const billingInfoSchema = z.object({
 export type PersonalInfo = z.infer<typeof personalInfoSchema>;
 export type ProfessionalInfo = z.infer<typeof professionalInfoSchema>;
 export type BillingInfo = z.infer<typeof billingInfoSchema>;
+
+export type StepFormData = PersonalInfo | ProfessionalInfo | BillingInfo;

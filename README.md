@@ -29,7 +29,11 @@ Create a multi-step form component that handles induvidual form steps for the mu
 
 Create a common form-field component to reuse the entity in multiple form steps across the form. Each form-field takes the label, register and their errors.
 
-Design the personal, profession & billing form steps to accomodate the data corresponding to their schemas. 
+Design the personal, profession & billing form steps to accomodate the data corresponding to their schemas. Handle the data types with their corresponding validations in the form-field.
+
+Create the next-step handle function that takes the form to the next-step (and submits final form) with validations and data merging with prev steps.
+
+Design the progess step component with
 
 ## Additional Info
 

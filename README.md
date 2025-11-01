@@ -25,7 +25,9 @@ Scaffold a starter template and customize the application with dependencies, sty
 
 Design the multi-step schemas for the multi-step form (personal, professional & billing), and their corresponding schema types.
 
-Create a multi-step form component that handles the form steps for the multi-processing. Create a custom-hook
+Create a multi-step form component that handles induvidual form steps for the multi-processing. Create a custom-hook that handles the step, schema, step data update, reset, and final submission of the entire form.
+
+Create a common form-field component to reuse the entity in multiple form steps across the form.
 
 ## Additional Info
 

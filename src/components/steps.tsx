@@ -117,8 +117,43 @@ const ProfessionalInfoStep = ({ register, errors, setValue }: StepProps) => {
 		</div>
 	);
 };
-const BillingInfoStep = () => {
-	return <div>Billing Info Step</div>;
+const BillingInfoStep = ({ register, errors }: StepProps) => {
+	return (
+		<div className="space-y-4">
+			<CardTitle className="text-xl">Billing Information</CardTitle>
+
+			<FormField
+				id="cardNumber"
+				label="Card Number"
+				type="number"
+				register={register}
+				errors={errors}
+			/>
+			<FormField
+				id="cardHolder"
+				label="Card Holder"
+				register={register}
+				errors={errors}
+			/>
+			<div className="grid grid-cols-2 gap-4">
+				<FormField
+					id="expiryDate"
+					label="Expiry Date"
+					register={register}
+					errors={errors}
+					maxLength={5}
+				/>
+				<FormField
+					id="cvv"
+					label="CVV"
+               type="number"
+					register={register}
+					errors={errors}
+					maxLength={3}
+				/>
+			</div>
+		</div>
+	);
 };
 
 export { PersonalInfoStep, ProfessionalInfoStep, BillingInfoStep };

@@ -27,7 +27,9 @@ Design the multi-step schemas for the multi-step form (personal, professional & 
 
 Create a multi-step form component that handles induvidual form steps for the multi-processing. Create a custom-hook that handles the step, schema, step data update, reset, and final submission of the entire form.
 
-Create a common form-field component to reuse the entity in multiple form steps across the form.
+Create a common form-field component to reuse the entity in multiple form steps across the form. Each form-field takes the label, register and their errors.
+
+Design the personal, profession & billing form steps to accomodate the data corresponding to their schemas. 
 
 ## Additional Info
 

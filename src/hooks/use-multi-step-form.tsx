@@ -59,7 +59,7 @@ export function useMultiStepForm() {
 	};
 
 	// handle final submission
-	const handleFinalSubmit = (data: StepFormData) => {
+	const submitForm = (data: StepFormData) => {
 		console.log("✔ Final Submitted data:", data);
 		setIsSubmitted(true);
 	};
@@ -82,7 +82,7 @@ export function useMultiStepForm() {
 		gotoNextStep,
 		gotoPrevStep,
 		updateFormData,
-		handleFinalSubmit,
+		submitForm,
 		resetForm,
 		getCurrentStepSchema,
 	};

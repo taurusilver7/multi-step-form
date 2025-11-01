@@ -33,7 +33,7 @@ export const steps: Step[] = [
 ];
 
 export function useMultiStepForm() {
-	const [currentStep, setCurrentStep] = useState(0);
+	const [currentStep, setCurrentStep] = useState(2);
 	const [formData, setFormData] = useState<Partial<StepFormData>>({});
 	const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 

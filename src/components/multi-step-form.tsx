@@ -19,7 +19,7 @@ const MultistepForm = () => {
 		getCurrentStepSchema,
 		gotoNextStep,
 		gotoPrevStep,
-		handleFinalSubmit,
+		submitForm,
 		updateFormData,
 		resetForm,
 		currentStep,
@@ -49,7 +49,21 @@ const MultistepForm = () => {
 
 	const onNext = async (data: StepFormData) => {
 		// Check for input validations manually
+		const isValid = await trigger();
+		if (!isValid) return; // stop if validation fails
+
+		const updatedData = { ...formData, ...data };
+		updateFormData(updatedData);
 		// Merge current step data with prev data.
+		if (isLastStep) {
+			try {
+				submitForm(updatedData);
+			} catch (error) {
+				console.error("Submission failed", error);
+			}
+		} else {
+			gotoNextStep();
+		}
 	};
 
 	return (
@@ -73,7 +87,9 @@ const MultistepForm = () => {
 							setValue={setValue}
 						/>
 					)}
-					{currentStep === 2 && <BillingInfoStep />}
+					{currentStep === 2 && (
+						<BillingInfoStep register={register} errors={errors} />
+					)}
 
 					<div className="flex items-center justify-between pt-4">
 						<Button
